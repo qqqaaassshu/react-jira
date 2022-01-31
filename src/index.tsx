@@ -1,3 +1,11 @@
+/*
+ * @Author: 胡纯明
+ * @LastEditors: 胡纯明
+ * @Date: 2022-01-31 14:31:47
+ * @LastEditTime: 2022-01-31 15:21:42
+ * @Description: 入口文件
+ * @FilePath: /jira/src/index.tsx
+ */
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
