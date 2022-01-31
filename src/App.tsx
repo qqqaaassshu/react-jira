@@ -1,6 +1,14 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+/*
+ * @Author: 胡纯明
+ * @LastEditors: 胡纯明
+ * @Date: 2022-01-31 14:31:47
+ * @LastEditTime: 2022-01-31 15:09:43
+ * @Description:
+ * @FilePath: /jira/src/App.tsx
+ */
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
   return (
