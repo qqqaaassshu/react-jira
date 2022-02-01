@@ -2,12 +2,27 @@
  * @Author: 胡纯明
  * @LastEditors: 胡纯明
  * @Date: 2022-01-31 16:10:51
- * @LastEditTime: 2022-01-31 18:18:44
+ * @LastEditTime: 2022-02-01 15:06:44
  * @Description: 用户列表组件
- * @FilePath: /jira/src/screens/project-list/list.jsx
+ * @FilePath: /jira/src/screens/project-list/List.tsx
  */
 
-const List = ({ users, list }) => {
+import { User } from "./SearchPanel";
+
+interface Project {
+  id: string;
+  name: string;
+  personId: string;
+  pin: boolean;
+  organization: string;
+}
+
+interface ListProps {
+  list: Project[];
+  users: User[];
+}
+
+const List = ({ users, list }: ListProps) => {
   return (
     <table>
       <thead>

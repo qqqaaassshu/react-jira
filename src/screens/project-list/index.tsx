@@ -2,9 +2,9 @@
  * @Author: 胡纯明
  * @LastEditors: 胡纯明
  * @Date: 2022-01-31 16:10:04
- * @LastEditTime: 2022-01-31 22:57:34
+ * @LastEditTime: 2022-02-01 15:14:46
  * @Description: 列表入口文件
- * @FilePath: /jira/src/screens/project-list/index.jsx
+ * @FilePath: /jira/src/screens/project-list/index.tsx
  */
 import { useState, useEffect } from "react";
 import SearchPanel from "./SearchPanel";
@@ -22,7 +22,7 @@ const ProjectList = () => {
     personId: "",
   });
 
-  const debouncedParam = useDebounce(param, 500);
+  const debouncedParam = useDebounce(param, 200);
 
   const [list, setList] = useState([]);
 

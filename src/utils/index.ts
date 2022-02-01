@@ -2,33 +2,35 @@
  * @Author: 胡纯明
  * @LastEditors: 胡纯明
  * @Date: 2022-01-31 18:26:06
- * @LastEditTime: 2022-01-31 22:57:48
+ * @LastEditTime: 2022-02-01 15:11:52
  * @Description: 工具方法集
- * @FilePath: /jira/src/utils/index.js
+ * @FilePath: /jira/src/utils/index.ts
  */
 
 import { useEffect, useState } from "react";
 
-export const isFalsy = (value) => (value === 0 ? false : !value);
+export const isFalsy = (value: any) => (value === 0 ? false : !value);
 
-export const cleanObject = (object) => {
+export const cleanObject = (object: object) => {
   const result = { ...object };
-  Object.keys(object).forEach((key) => {
-    const value = object[key];
+  Object.keys(result).forEach((key) => {
+    // @ts-ignore
+    const value = result[key];
     if (isFalsy(value)) {
+      // @ts-ignore
       delete result[key];
     }
   });
   return result;
 };
 
-export const useMount = (callback) => {
+export const useMount = (callback: () => void) => {
   useEffect(() => {
     callback();
   }, []);
 };
 
-export const useDebounce = (value, delay) => {
+export const useDebounce = (value: any, delay?: number) => {
   const [debouncedValue, setDebouncedValue] = useState(value);
 
   useEffect(() => {
