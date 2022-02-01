@@ -2,14 +2,14 @@
  * @Author: 胡纯明
  * @LastEditors: 胡纯明
  * @Date: 2022-01-31 18:26:06
- * @LastEditTime: 2022-02-01 15:11:52
+ * @LastEditTime: 2022-02-01 16:45:49
  * @Description: 工具方法集
  * @FilePath: /jira/src/utils/index.ts
  */
 
 import { useEffect, useState } from "react";
 
-export const isFalsy = (value: any) => (value === 0 ? false : !value);
+export const isFalsy = (value: unknown) => (value === 0 ? false : !value);
 
 export const cleanObject = (object: object) => {
   const result = { ...object };
@@ -30,9 +30,8 @@ export const useMount = (callback: () => void) => {
   }, []);
 };
 
-export const useDebounce = (value: any, delay?: number) => {
+export const useDebounce = (value: unknown, delay?: number): any => {
   const [debouncedValue, setDebouncedValue] = useState(value);
-
   useEffect(() => {
     const timeout = setTimeout(() => setDebouncedValue(value), delay);
     return () => clearTimeout(timeout);
